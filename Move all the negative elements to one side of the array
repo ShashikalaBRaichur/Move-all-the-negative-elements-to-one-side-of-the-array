@@ -1,0 +1,34 @@
+package movingnegativeelements;
+import java.util.*;
+public class MovingNegativeElements {
+
+	public static void main(String[] args) {
+		int a[]=new int[20];
+		int i,n,j,k,temp;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		n=sc.nextInt();
+		System.out.println("Enter the no. of "+n+ "elements with negative values");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		System.out.println("The shifted negative elements are");
+		for(i=0;i<n;i++)
+		{
+			for(j=0;j<i;j++)
+			{
+				if(a[i]<0) {
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+				}
+		}
+	}
+		for(i=0;i<n;i++) {
+		System.out.println(a[i]);
+	}
+	}
+}
+
+
